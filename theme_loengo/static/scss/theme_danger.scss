@@ -1,0 +1,61 @@
+@font-face {
+    font-family:"lato";
+    src: url("/theme_loengo/static/fonts/Lato-Light.ttf");
+}
+@font-face {
+    font-family:"Sansation_Light";
+    src: url("/theme_loengo/static/fonts/Sansation_Light.ttf");
+}
+$font_main: "Sansation_Light";
+$color-danger: #dc3545;
+
+footer > div.theme_danger,
+header > div.theme_danger {
+        background-color: #dc3545 !important;
+}
+
+nav .theme_danger {
+     background-color: transparent !important;
+     div section div a {
+         background: #dc3545 !important;
+         border: 1px solid #dc3545 !important;
+     }
+     div#top_menu_collapse {
+                ul#top_menu{
+                    li > a {
+                        color: #dc3545 !important;
+                        text-transform: capitalize;
+                        font-size: 15px;
+                        font-family: $font_main;
+                        &:hover {
+                            border-bottom: 5px solid #dc3545 !important;
+                            border-bottom-right-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            padding-bottom: 1px;
+                        }
+                    }
+                    li > a.active {
+                        border-bottom: 5px solid #dc3545 !important;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        padding-bottom: 1px;
+                    }
+                    div.dropdown-menu {
+                            a {
+                                 color: #191a1a;
+                                text-transform: capitalize;
+                                font-size: 15px;
+                                font-family: $font_main;
+                            }
+                        }
+                }
+     }
+}
+main {
+    div.theme_danger {
+       a.btn-primary{
+            background: $color-danger !important;
+            border: 1px solid $color-danger !important;
+       }
+    }
+}

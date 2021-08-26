@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="akl_theme_base_style1_res" name="akl_theme_base_style1_res" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+
+                <!-- css -->
+                <link rel="stylesheet" href="/akl_theme_base/static/css/perfect-scrollbar.css" />
+
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_base_vars.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_base_mixin.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_base.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_menu.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_app_menu.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_side_bar_menu.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_list_view.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_action_manager.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_form.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_form_view.scss" />
+                
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_footer.scss" />
+                <link rel="stylesheet" href="/akl_theme_base/static/css/akl_control_pannel.scss" />
+                
+                <script type="application/javascript" src="/akl_theme_base/static/lib/jquery.nicescroll.min.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_app_menu.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_menu.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_sidebar_menu.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_webclient.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_theme_bus.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_relation_fields.js" />
+                <script type="application/javascript" src="/akl_theme_base/static/js/akl_control_pannel.js" />
+                
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

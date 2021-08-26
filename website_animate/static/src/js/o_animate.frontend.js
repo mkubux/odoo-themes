@@ -34,7 +34,9 @@ var WebsiteAnimate = {
             self.win.h = $(window).height();
             $(window).trigger("scroll");
         })
-        .trigger("resize")
+        .trigger("resize");
+
+        $().getScrollingElement()
         .on("scroll.o_animate, slid.bs.carousel", (_.throttle(function () {
             // _.throttle -> Limit the number of times the scroll function
             // can be called in a given period. (http://underscorejs.org/#throttle)

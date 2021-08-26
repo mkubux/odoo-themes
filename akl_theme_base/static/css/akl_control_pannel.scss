@@ -1,0 +1,44 @@
+
+.akl_control_panel_moblie {
+
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 3px 15px 0 #343a4047;
+
+    .o_searchview {
+        min-width: 200px;
+        max-width: auto;
+        width: 100%;
+    }
+
+    .operation_row {
+        @include akl_flex();
+        flex-direction: row-reverse;
+    }
+    
+    .o_dropdown_toggler_btn, .akl_footer {
+        margin-right: 5px;
+
+        .o_dropdown_title {
+            display: none;
+        }
+
+        .fa-chevron-right {
+            display: none;
+        }
+
+        .fa-chevron-down {
+            display: none;
+        }
+    }
+
+    .o_search_options {
+        margin-right: 5px;
+    }
+}
+
+.o_searchview {
+    max-width: inherit;
+}
+
+

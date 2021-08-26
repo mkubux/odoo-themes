@@ -1,0 +1,610 @@
+
+a:hover {
+    color: #0056b3;
+  }
+  
+  ul:not(.list-unstyled) {
+    margin: 0;
+    padding: 0;
+  }
+
+  .o_web_client {
+    background-color: #ffffff;
+  }
+  
+  .card {
+    position: relative;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 3px;
+    box-shadow: 0 4px 25px 0 rgba(13, 26, 53, 0.1);
+    border: 1px solid transparent;
+  }
+  
+  .o_input,
+  .single-line {
+    -webkit--webkit-appearance: none; -moz-appearance: none; appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    font-size: inherit;
+    height: 34px;
+    line-height: 34px;
+    outline: none;
+    padding: 0 10px;
+    width: 100%;
+  }
+  
+  .o_input:focus,
+  .single-line:focus {
+    border-color: #66afe9;
+    outline: 0;
+  }
+  
+  .o_input:hover,
+  .single-line:hover {
+    border-color: #c0c4cc;
+  }
+  
+  .o_input input.o_input,
+  .single-line input.o_input {
+    height: 30px;
+  }
+  
+  .o_field_widget .o_input_dropdown > input {
+    height: 34px;
+    line-height: 34px;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+  
+  .o_datepicker .o_datepicker_input {
+    padding-right: 15px;
+  }
+  
+  .o_input_dropdown .o_dropdown_arrow,
+  .awsome_datetime_picker .o_dropdown_arrow,
+  .o_datepicker .o_dropdown_arrow {
+    position: absolute;
+    line-height: 34px;
+    top: 0px;
+    bottom: 0px;
+    left: auto;
+    bottom: auto;
+    right: 8px;
+    color: #c0c4cc;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+  
+  .o_field_widget .o_input_dropdown .o_dropdown_arrow.awsome_reverse,
+  .awsome_datetime_picker .o_dropdown_arrow.awsome_reverse,
+  .o_datepicker .o_dropdown_arrow.awsome_reverse {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  
+  .o_field_widget.o_field_many2manytags {
+    overflow: hidden;
+  }
+  
+  .o_field_widget.o_field_many2manytags .o_input_dropdown .o_dropdown_arrow {
+    right: 3px;
+  }
+  
+  .dropdown-menu.show {
+    margin-top: 3px;
+  }
+  
+  .o_cp_sidebar {
+    padding-left: 5px;
+  }
+  
+  .o_searchview {
+    padding-right: 25px;
+    min-width: 400px;
+    max-width: 600px;
+  }
+  
+  .o_searchview .o_searchview_facet .o_searchview_facet_label {
+    background-color: #868e96;
+  }
+  
+  .o_searchview .o_searchview_input_container .o_searchview_autocomplete li {
+    height: 24px;
+    line-height: 24px;
+  }
+  
+  .o_searchview .o_searchview_input_container .o_searchview_autocomplete li.o_selection_focus {
+    background-color: #9e9db7;
+  }
+  
+  .o_search_options .o_dropdown_toggler_btn:first-child {
+    margin-right: 0px !important;
+  }
+  
+  .o_datepicker .o_dropdown_arrow {
+    position: absolute;
+    line-height: 34px;
+    top: 0px;
+    bottom: 0px;
+    left: auto;
+    bottom: auto;
+    right: 8px;
+    color: #c0c4cc;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+  
+  .o_field_widget .o_input_dropdown .awsome_reverse, .awsome_datetime_picker .o_input_dropdown .awsome_reverse, .o_datepicker .o_input_dropdown .awsome_reverse {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  
+  /* kanban */
+  .o_kanban_view .o_kanban_record:focus, .o_kanban_view .o_kanban_record:focus-within, .o_kanban_view .o_kanban_quick_create:focus, .o_kanban_view .o_kanban_quick_create:focus-within {
+    -webkit-box-shadow: 1px 1px 1px 0px #6c757d;
+    -moz-box-shadow: 1px 1px 1px 0px #6c757d;
+    box-shadow: 1px 1px 1px 0px #6c757d;
+    z-index: 1;
+    outline: none;
+  }
+  
+  .o_field_widget .o_input_dropdown .o_dropdown_arrow,
+  .awsome_datetime_picker .o_dropdown_arrow,
+  .o_datepicker .o_dropdown_arrow {
+    position: absolute;
+    line-height: 34px;
+    top: 0px;
+    bottom: 0px;
+    left: auto;
+    bottom: auto;
+    right: 8px;
+    color: #c0c4cc;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+  
+  .o_field_widget .o_input_dropdown .awsome_reverse,
+  .awsome_datetime_picker .o_dropdown_arrow.awsome_reverse,
+  .o_datepicker .o_dropdown_arrow.awsome_reverse {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  
+  /* kanban */
+  .o_kanban_view .o_kanban_record {
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    border: 1px #d9d9d9 solid;
+    margin: 0 15px 15px 0;
+    min-width: 150px;
+    margin: 0 0 -1px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+  }
+  
+  .o_kanban_view .o_kanban_record:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0px, 0px, -2px);
+  }
+  
+  .o_kanban_view .oe_kanban_card .o_dropdown_kanban .dropdown-toggle, .o_kanban_view .o_kanban_record .o_dropdown_kanban .dropdown-toggle {
+    border-radius: 0px;
+  }
+  
+  .o_form_label::after {
+    content: ":";
+  }
+  
+  @media (min-width: 576px) {
+    .modal-dialog {
+      height: auto;
+    }
+  }
+  
+  .oe_title h1 {
+    padding: 10px 0px;
+  }
+  
+  .o_searchview .o_searchview_more {
+    position: absolute;
+    top: 7px;
+    left: auto;
+    bottom: auto;
+    right: 6px;
+  }
+  
+  .o_field_binary_file > .btn {
+    padding: 0px 10px;
+    height: 34px;
+    line-height: 34px;
+  }
+  
+  .o_required_modifier.o_input, .o_required_modifier .o_input {
+    background-color: #f8f8ff !important;
+  }
+  
+  .o_field_widget .o_input_dropdown .awsome_reverse,
+  .awsome_datetime_picker .o_dropdown_arrow.awsome_reverse,
+  .o_datepicker .o_dropdown_arrow.awsome_reverse {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  
+  .o_field_widget.o_field_many2manytags .o_input_dropdown .o_dropdown_arrow {
+    right: 3px;
+  }
+  
+  .o_field_widget .o_input_dropdown .o_dropdown_arrow,
+  .awsome_datetime_picker .o_dropdown_arrow,
+  .o_datepicker .o_dropdown_arrow {
+    position: absolute;
+    line-height: 34px;
+    top: 0px;
+    bottom: 0px;
+    left: auto;
+    bottom: auto;
+    right: 8px;
+    color: #c0c4cc;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+  
+  .o_external_button {
+    background: none;
+    border: none;
+  }
+  
+  .o_external_button:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .ui-autocomplete .ui-menu-item.ui-state-focus {
+    background-image: none;
+    background-color: #007bff;
+    border: none;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .ui-autocomplete .ui-menu-item:hover {
+    background-color: #007bff;
+  }
+  
+  .ui-autocomplete .ui-menu-item > a:hover {
+    background: transparent;
+  }
+  
+  .ui-autocomplete .ui-menu-item > a.ui-state-active {
+    background-color: #007bff;
+  }
+  
+  .ui-autocomplete li.o-selection-focus {
+    background-color: #007bff;
+    height: 24px;
+    line-height: 24px;
+  }
+  
+  .awsome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 990;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+  }
+  
+  .o_list_view .o_list_table tfoot {
+    background-color: none !important;
+  }
+  
+  .o_list_view .o_list_table .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier):not(.o_invisible_modifier) {
+    background-color: transparent;
+  }
+  
+  .o_list_view .o_list_table thead > tr > th:not(.o_list_record_selector) {
+    border-left: none;
+    vertical-align: middle;
+  }
+  
+  .favorite-container .dropdown-item.selected:before {
+    left: 0px;
+  }
+  
+  .favorite-container .o_trash_button {
+    right: 0;
+  }
+  
+  .o_searchview_extended_delete_prop {
+    position: absolute;
+    top: 14px;
+  }
+  
+  .o_searchview_extended_prop_field,
+  .o_searchview_extended_prop_op {
+    margin: 0px 5px;
+  }
+  
+  @media (max-width: 414px) {
+    .page-header-content .action-title {
+      display: none;
+    }
+  }
+  
+  .page-footer .dropdown-menu {
+    min-width: inherit;
+  }
+  
+  .page-footer .switcher .btn-link {
+    color: #5A6169;
+  }
+  
+  .page-footer .switcher .active {
+    color: black;
+  }
+  
+  .page-footer .switcher .btn {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .page-footer .switcher .btn:hover {
+    color: #007bff;
+  }
+  
+  .page-footer .switcher .btn:hover:before {
+    opacity: 1;
+    height: 120%;
+    width: 120%;
+  }
+  
+  .page-footer .switcher .btn:focus:before {
+    opacity: 1;
+    height: 120%;
+    width: 120%;
+  }
+  
+  .page-footer .switcher .o_pager_previous:hover,
+  .page-footer .switcher .o_pager_next:hover {
+    color: #007bff;
+  }
+  
+  .awsome_theme_systray > li a {
+    font-size: 14px;
+  }
+  
+  .awsome_theme_systray > li a i, .awsome_theme_systray > li a span {
+    font-size: larger;
+  }
+  
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    width: auto;
+  }
+  
+  .bootstrap-datetimepicker-widget table td.today:before {
+    display: none;
+  }
+  
+  .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+    background: transparent;
+  }
+  
+  .o_loading {
+    background-color: #c7c7c7;
+  }
+  
+  .o_action {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; flex-direction: column;
+    -webkit-box-flex: 1; -webkit-flex: 1 1 auto; flex: 1 1 auto;
+  }
+  
+  .o_field_widget.o_field_many2one .o_external_button {
+    background: transparent;
+  }
+  
+  .o_field_widget.o_field_many2one .o_external_button:hover {
+    background: transparent;
+  }
+  
+  .o_field_widget.o_field_many2one .o_external_button:focus {
+    outline: none;
+    background: transparent;
+  }
+  
+  .o_field_widget.o_field_many2one .o_external_button:active {
+    background: transparent;
+  }
+  
+  .modal-footer button:not(:first) {
+    margin-left: 5px;
+  }
+  
+  .custom-control-label::before {
+    top: .1rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    left: -0.25rem;
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+    transition: all 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    box-shadow: none;
+  }
+  
+  .custom-radio .custom-control-label::after {
+    content: '';
+    border-radius: 50%;
+    transform: scale(0);
+    background-image: none !important;
+    position: absolute;
+    background: #1c66d4;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: -.2px;
+    transition: all 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    transition-delay: .1s;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #adb5bd;
+    background-color: transparent;
+  }
+  
+  .custom-control.custom-checkbox .custom-control-input:not(:checked):not(:indeterminate) ~ .custom-control-label:before {
+    background: none;
+    outline: none;
+  }
+  
+  .custom-checkbox .custom-control-label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border-right: 2px solid #adb5bd;
+    border-bottom: 2px solid #adb5bd;
+    background-image: none !important;
+  }
+  
+  .custom-checkbox .custom-control-label::before {
+    content: '';
+    left: 1px;
+  }
+  
+  .form-control:focus {
+    color: #495057;
+    background-color: #FFFFFF;
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(233, 236, 239, 0.25);
+  }
+  
+  .ui-autocomplete {
+    margin-top: 3px;
+  }
+  
+  .o_setting_right_pane .o_web_settings_invite {
+    margin: 8px;
+  }
+  
+  .note-editor {
+    border: 1px solid #dcdfe6 !important;
+  }
+  
+  .note-editor .panel-heading.note-toolbar {
+    border-bottom: 1px solid #dcdfe6;
+    background-color: #ffffff;
+    color: #212529;
+  }
+  
+  .note-editor .panel-heading.note-toolbar .btn {
+    border-left: none;
+    border-right: none;
+    background: transparent;
+  }
+  
+  .note-editor .panel-heading.note-toolbar .dropdown-item {
+    background-color: #595964;
+    color: #C6C6C6;
+  }
+  
+  .note-editor .panel-heading.note-toolbar .btn-group.show > .btn {
+    background: #dee2e6;
+    color: #4c4c4cd1;
+  }
+  
+  .note-editor .panel-heading.note-toolbar .dropdown-item:not(.d-none) ~ .dropdown-item {
+    border-top: none;
+  }
+  
+  @media (max-width: 992px) {
+    .header {
+      height: auto !important;
+    }
+    .header_left_part {
+      padding: 6px 5px 6px 5px;
+      width: 100%;
+    }
+    .header_right_part {
+      width: 100%;
+      padding: 10px 0px;
+    }
+    .o_action_manager {
+      margin-top: 56px;
+    }
+  }
+  
+  .o_MessagingMenu .o_MessagingMenu_counter {
+    position: relative;
+    transform: inherit;
+    margin-right: -10px;
+    margin-top: -0.8rem;
+    margin-right: 0;
+    margin-left: -0.6rem;
+    background: #00A09D;
+    color: white;
+    vertical-align: super;
+    font-size: 0.7em;
+  }
+  
+  body.hide_awsome_app_name .awsome_app_name {
+    display: none !important;
+  }
+  
+  body.hide_awsome_app_name .navigation .navigation-menu-tab a.active:after {
+    top: 10px;
+    bottom: 10px;
+  }
+  
+  

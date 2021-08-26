@@ -1,0 +1,28 @@
+.o_form_view {
+    background-color: inherit;
+
+    .o_form_sheet_bg {
+        border-bottom: none;
+        background: none;
+    }
+
+    .o_form_sheet_bg>.o_form_sheet {
+        min-width: inherit;
+        max-width: inherit;
+        min-height: 330px;
+        padding: 16px;
+        border: none;
+        box-shadow: none;
+        background: white;
+    }
+}
+
+@media (min-width: 768px) {
+    .o_form_view .o_form_sheet_bg > .o_form_sheet {
+      margin: auto;
+    }
+}
+
+.o_form_view .o_form_statusbar {
+    border-bottom: none
+  }

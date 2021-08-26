@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <header t-name="alk_simple_theme.Menu">
+        <nav class="o_main_navbar akl_main_navbar d-flex flex-row">
+            <a class="sub_menu_toggler d-none">
+                <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                    <path d="M1 102h1022a1 1 0 0 1 1 1v134.533a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V103a1 1 0 0 1 1-1z m0 341.333h1022a1 1 0 0 1 1 1v134.534a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V444.333a1 1 0 0 1 1-1z m0 341.334h1022a1 1 0 0 1 1 1V920.2a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V785.667a1 1 0 0 1 1-1z" fill="#ffffff"></path>
+                </svg>
+            </a>
+            <div class="akl_side_bar" />
+            <div class="company_logo d-flex align-items-center">
+                <img class="img-responsive d-block mx-auto logo" t-attf-src="/web/binary/company_logo" alt="Logo"/>
+            </div>
+            <ul class="o_menu_apps akl_menu_apps flex-fill" />
+            <ul class="o_menu_systray d-flex align-items-center" role="menu"/>
+        </nav>
+    </header>
+
+    <!-- akl app menu -->
+    <t t-name="akl_theme_base.app_menu">
+        <ul class="nav nav-pills nav-tabs-btn flex-fill" role="tablist">
+            <t t-foreach="widget.getApps() || []" t-as="app">
+                <li class="nav-item akl_app_item" t-att-data-action-id="app.actionID">
+                    <a class="nav-link d-flex flex-column justify-content-center"
+                        data-toggle="tab"
+                        t-attf-href="#akl_app_{{app.menuID}}"
+                        t-att-data-menu-id="app.menuID"
+                        t-att-data-menu-xmlid="app.xmlID"
+                        t-att-data-action-id="app.actionID">
+                        <img class="o-app-icon nav-link-icon" t-attf-src="data:image/png;base64,#{app.web_icon_data}"/>
+                        <span class="nav-link-title">
+                            <t t-esc="app.name"/>
+                        </span>
+                    </a>
+                </li>
+            </t>
+            <!-- akl more -->
+            <li class="view_more">
+                <a class="dropdown-toggle akl_view_more_toggle" data-toggle="dropdown" href="#">
+                <span class="fa fa-caret-down"/></a>
+                <div class="dropdown-menu" role="menu" />
+            </li>
+        </ul>
+    </t>
+    <!-- secondary more menu -->
+    <t t-name="akl_side_bar_menu">
+        <div class="akl_left_sidebar">
+            <t t-foreach="widget.menuData.children" t-as="first_level_menu">
+                <div t-attf-id="akl_tabs_{{first_level_menu.id}}" 
+                    class="akl_sub_menu_section scroll-sidebar tab-pane fade">
+                    <nav class="sidebar-nav">
+                        <ul class="side_bar_nav_sec">
+                            <t t-foreach="first_level_menu.children" t-as="second_level_menu">
+                                <t t-call="akl.menu.link">
+                                    <t t-set="depth" t-value="0"/>
+                                    <t t-set="menu" t-value="second_level_menu"/>
+                                </t>
+                            </t>
+                        </ul>
+                    </nav>
+                </div>
+            </t>
+        </div>
+    </t>
+    
+    <!-- second or more depth -->
+    <t t-name="akl.menu.link">
+        <t t-set="depth" t-value="(depth || 0) + 1"/>
+        <t t-if="!menu.children.length">
+            <li class="sidebar-item">
+                <a t-attf-class="sidebar-link sidebar-link o_menu_entry_lvl_#{depth}"
+                    t-attf-href="#menu_id=#{menu.id}&amp;action=#{menu.action ? menu.action.split(',')[1] : ''}"
+                    t-att-data-menu="menu.id"
+                    t-att-data-action-model="menu.action ? menu.action.split(',')[0] : ''"
+                    t-att-data-action-id="menu.action ? menu.action.split(',')[1] : ''"
+                    t-att-data-menu-xmlid="menu.xmlid">
+                    <span class="hide-menu">
+                        <t t-esc="menu.name"/>
+                    </span>
+                </a>
+            </li>
+        </t>
+        <t t-else="">
+            <li class="sidebar-item">
+                <a t-attf-class="sidebar-link has-arrow o_menu_entry_lvl_#{depth}" 
+                    href="javascript:void(0)">
+                    <span class="hide-menu">
+                        <t t-esc="menu.name"/>
+                    </span>
+                </a>
+                <ul class="collapse first-level" aria-expanded="false">
+                    <t t-foreach="menu.children" t-as="menu">
+                        <t t-call="akl.menu.link" />
+                    </t>
+                </ul>
+            </li>
+        </t>
+    </t>
+
+    <t t-name="alk_theme.more_item">
+        <a class="dropdown-item akl_app_item"
+            data-toggle="tab"
+            t-attf-href="#akl_tabs_{{menu_id}}"
+            t-att-data-menu-id="menu_id"
+            t-att-data-menu-xmlid="xml_id"
+            t-att-data-action-id="action_id">
+            <span class="nav-link-title">
+                <t t-esc="name"/>
+            </span>
+        </a>
+    </t>
+
+</templates>
