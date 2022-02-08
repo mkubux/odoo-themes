@@ -1,8 +1,6 @@
-odoo.define("theme_zap.tour.zap", function (require) {
-"use strict";
+/** @odoo-module */
 
-const wTourUtils = require("website.tour_utils");
-var tour = require("web_tour.tour");
+import wTourUtils from 'website.tour_utils';
 
 const snippets = [
     {
@@ -10,8 +8,8 @@ const snippets = [
         name: 'Banner',
     },
     {
-        id: 's_numbers',
-        name: 'Numbers',
+        id: 's_three_columns',
+        name: 'Columns',
     },
     {
         id: 's_color_blocks_2',
@@ -43,6 +41,4 @@ wTourUtils.registerThemeHomepageTour("zap_tour", [
     wTourUtils.clickOnSnippet(snippets[5], 'top'),
     wTourUtils.changeBackgroundColor(),
     wTourUtils.selectColorPalette(),
-    wTourUtils.clickOnSave(),
 ]);
-});

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="theme_footer" inherit_id="website.footer_custom">
         <xpath expr="//div[@id='footer']" position="replace">
@@ -10,16 +10,22 @@
                                 <div class="footer-widget">
                                     <!-- Brand -->
                                     <a href="/" class="logo">
-                                        <span t-field="website.logo" class="" t-options="{'widget': 'image'}" role="img"
-                                              t-att-aria-label="'Logo of %s' % website.name"
-                                              t-att-title="website.name"/>
+                                        <span
+                                            t-field="website.logo"
+                                            class=""
+                                            t-options="{'widget': 'image'}"
+                                            role="img"
+                                            t-att-aria-label="'Logo of %s' % website.name"
+                                            t-att-title="website.name"
+                                        />
                                     </a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    <p
+                                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.
                                     </p>
 
                                     <div>
-                                        <t t-call="website.language_selector"/>
+                                        <t t-call="website.language_selector" />
                                     </div>
                                 </div>
                             </div>
@@ -96,39 +102,63 @@
                                     <!-- Links -->
                                     <ul class="list-unstyled footer-links">
                                         <li t-if="website.social_facebook">
-                                            <a t-att-href="website.social_facebook" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-facebook-square"/>Facebook
+                                            <a
+                                                t-att-href="website.social_facebook"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span
+                                                    class="fa fa-facebook-square"
+                                                />Facebook
                                             </a>
                                         </li>
                                         <li t-if="website.social_twitter">
-                                            <a t-att-href="website.social_twitter" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-twitter"/>Twitter
+                                            <a
+                                                t-att-href="website.social_twitter"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span class="fa fa-twitter" />Twitter
                                             </a>
                                         </li>
                                         <li t-if="website.social_linkedin">
-                                            <a t-att-href="website.social_linkedin" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-linkedin"/>Linkedin
+                                            <a
+                                                t-att-href="website.social_linkedin"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span class="fa fa-linkedin" />Linkedin
                                             </a>
                                         </li>
                                         <li t-if="website.social_youtube">
-                                            <a t-att-href="website.social_youtube" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-youtube-play"/>Youtube
+                                            <a
+                                                t-att-href="website.social_youtube"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span
+                                                    class="fa fa-youtube-play"
+                                                />Youtube
                                             </a>
                                         </li>
                                         <li t-if="website.social_github">
-                                            <a t-att-href="website.social_github" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-github"/>Github
+                                            <a
+                                                t-att-href="website.social_github"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span class="fa fa-github" />Github
                                             </a>
                                         </li>
                                         <li t-if="website.social_instagram">
-                                            <a t-att-href="website.social_instagram" target="_blank"
-                                               class="btn btn-sm btn-link">
-                                                <span class="fa fa-instagram"/>Instagram
+                                            <a
+                                                t-att-href="website.social_instagram"
+                                                target="_blank"
+                                                class="btn btn-sm btn-link"
+                                            >
+                                                <span
+                                                    class="fa fa-instagram"
+                                                />Instagram
                                             </a>
                                         </li>
                                     </ul>
@@ -141,7 +171,7 @@
             <!--  Page Scroll to Top  -->
 
             <a class="scroll-to-top js-scroll-trigger" href="#top">
-                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-up" />
             </a>
             <section class="py-2">
                 <div class="container">
@@ -149,9 +179,11 @@
                         <div class="col-lg-12">
                             <!-- Copyright -->
                             <p class="footer-copy ">
-                                Powered by <a href="https://apps.odoo.com/apps/themes/14.0/theme_hspl_emerald/"
-                                              title="Heliconia">Emerald Odoo Theme
-                            </a> from <a href="https://www.heliconia.io" title="Heliconia">Heliconia</a>.
+                                Copyright &amp;copy; <span
+                                    t-field="res_company.name"
+                                    itemprop="name"
+                                >Company name
+                            </span> All rights reserved.
                             </p>
                         </div>
                     </div>
@@ -161,9 +193,9 @@
         </xpath>
     </template>
     <template id="theme_brand_promotion" inherit_id="website.brand_promotion">
-        <xpath expr="//div[hasclass('o_brand_promotion')]" position="replace"></xpath>
+        <xpath expr="//div[hasclass('o_brand_promotion')]" position="replace" />
     </template>
     <template id="theme_frontend_footer" inherit_id="web.frontend_layout">
-        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace"></xpath>
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace" />
     </template>
 </odoo>

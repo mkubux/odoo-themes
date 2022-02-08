@@ -17,16 +17,16 @@ const snippets = [
         name: 'Text - Image',
     },
     {
-        id: 's_three_columns',
-        name: 'Columns',
+        id: 's_numbers',
+        name: 'Numbers',
     },
     {
-        id: 's_company_team',
-        name: 'Team',
+        id: 's_picture',
+        name: 'Picture',
     },
     {
-        id: 's_call_to_action',
-        name: 'Call to Action',
+        id: 's_comparisons',
+        name: 'Comparisons',
     },
 ];
 
@@ -45,7 +45,5 @@ wTourUtils.registerThemeHomepageTour("graphene_tour", [
     wTourUtils.clickOnSnippet(snippets[4], 'top'),
     wTourUtils.changeBackgroundColor('left'),
     wTourUtils.selectColorPalette(),
-
-    wTourUtils.clickOnSave(),
 ]);
 });

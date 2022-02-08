@@ -21,9 +21,6 @@
 // Bootstrap
 //------------------------------------------------------------------------------//
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold:                  200 !default;
-
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -58,6 +55,8 @@ $font-weight-normal:                        $o-theme-font-weight-normal !default
 $font-weight-bold:                          $o-theme-font-weight-bold !default;
 
 $headings-font-weight:                      $o-theme-headings-font-weight !default;
+
+$blockquote-font-size:                      o-website-value('font-size-base') !default;
 
 // Buttons + Forms
 //

@@ -1,70 +1,15 @@
 //------------------------------------------------------------------------------
-// Colors
-//------------------------------------------------------------------------------
-$o-color-palettes: (
-    (
-        'o-color-1': #278f84,
-        'o-color-2': #494048,
-        'o-color-3': #f9f9f9,
-        'o-color-4': #FFFFFF,
-        'o-color-5': #201c20,
-
-        'o-cc5-link': #65e4d7,
-
-        'menu': 3,
-        'footer': 3,
-        'copyright': 3,
-    ),
-    (
-        'o-color-1': #414f8a,
-        'o-color-2': #888888,
-        'o-color-3': #f9f9f9,
-        'o-color-4': #FFFFFF,
-        'o-color-5': #222222,
-
-        'o-cc5-text': #b8b7b7,
-        'o-cc5-link': 'o-color-4',
-
-        'menu': 5,
-        'footer': 5,
-        'copyright': 5,
-    ),
-    (
-        'o-color-1': #dfcc60,
-        'o-color-2': #7f6262,
-        'o-color-3': #f9f9f9,
-        'o-color-4': #FFFFFF,
-        'o-color-5': #352626,
-
-        'menu': 4,
-        'footer': 4,
-        'copyright': 4,
-    ),
-    (
-        'o-color-1': #01e0b5,
-        'o-color-2': #5c7aff,
-        'o-color-3': #f9f9f9,
-        'o-color-4': #FFFFFF,
-        'o-color-5': #444444,
-
-        'o-cc2-link': 'o-color-5',
-
-        'menu': 3,
-        'footer': 3,
-        'copyright': 3,
-    ),
-);
-
-//------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
 
-$o-theme-h1-font-size-multiplier: (25 / 12);
-$o-theme-h2-font-size-multiplier: (18 / 12);
-$o-theme-h3-font-size-multiplier: (16 / 12);
-$o-theme-h4-font-size-multiplier: (14 / 12);
-$o-theme-h5-font-size-multiplier: 1;
-$o-theme-h6-font-size-multiplier: 1;
+$o-theme-h1-font-size-multiplier: (62 / 16);
+$o-theme-h2-font-size-multiplier: (44 / 16);
+$o-theme-h3-font-size-multiplier: (36 / 16);
+$o-theme-h4-font-size-multiplier: (24 / 16);
+$o-theme-h5-font-size-multiplier: (21 / 16);
+$o-theme-h6-font-size-multiplier: (18 / 16);
+
+$o-theme-headings-font-weight: 700;
 
 $o-theme-font-configs: (
     'Heebo': (
@@ -115,6 +60,10 @@ $o-theme-font-configs: (
         'family': ('Oswald', sans-serif),
         'url': 'Oswald:300,300i,400,400i,700,700i',
     ),
+    'Work Sans': (
+        'family': ('Work Sans', sans-serif),
+        'url': 'Work+Sans:300,300i,400,400i,700,700i',
+    ),
 );
 
 //------------------------------------------------------------------------------
@@ -123,18 +72,60 @@ $o-theme-font-configs: (
 
 $o-website-values-palettes: (
     (
+        'color-palettes-name': 'odoo-experts-1',
         'logo-height': (52 / 16) * 1rem,
         'fixed-logo-height': (52 / 16) * 1rem,
-        'header-font-size': (18 / 16) * 1rem,
+        'header-font-size': 1rem,
         'btn-border-radius': 0,
         'btn-border-radius-lg': 0,
         'btn-border-radius-sm': 0,
         'font': 'Lato',
-        'headings-font': 'Oswald',
-        'navbar-font': 'Oswald',
+        'headings-font': 'Work Sans',
+        'navbar-font': 'Work Sans',
         'buttons-font': 'Lato',
-        'header-template': 'contact',
+        'header-template': 'Contact',
         'footer-template': 'contact',
-        'header-links-style': 'border-bottom',
+        'link-underline': 'never',
     ),
 );
+
+$o-palette-priority-prefix: 'odoo-experts';
+
+$o-color-palettes-compatibility-indexes: (
+    1: 'odoo-experts-1',
+    2: 'odoo-experts-2',
+    3: 'odoo-experts-3',
+    4: 'odoo-experts-4',
+    5: 'generic-1',
+    6: 'generic-2',
+    7: 'generic-3',
+    8: 'generic-4',
+    9: 'generic-5',
+    10: 'generic-6',
+    11: 'generic-7',
+    12: 'generic-8',
+    13: 'generic-9',
+    14: 'generic-10',
+    15: 'generic-11',
+    16: 'generic-12',
+    17: 'generic-13',
+    18: 'generic-14',
+    19: 'generic-15',
+    20: 'generic-16',
+    21: 'generic-17',
+);
+
+//------------------------------------------------------------------------------
+// Shapes
+//------------------------------------------------------------------------------
+
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Origins/02_001', (5: 3));
+$o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Origins/02_001', 'second', (4: 4, 5:2));
+$o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Origins/02_001', 'third', (4: 2, 5: 1));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Origins/09_001', (3: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Origins/16', (3: 1));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Floats/07', (1: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Blobs/04', (5: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Rainy/10', (1: 5, 3: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Airy/01', (1: 3));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Airy/03_001', (5: 4));

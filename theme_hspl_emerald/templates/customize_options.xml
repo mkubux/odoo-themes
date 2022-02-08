@@ -1,30 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="option_header_01_assets" inherit_id="website.assets_frontend" priority="17" active="true">
-        <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" type="text/scss" href="/theme_hspl_emerald/static/src/scss/header1.scss"/>
-        </xpath>
-    </template>
-    <template id="option_header_02_assets" inherit_id="website.assets_frontend" priority="17" active="False">
-        <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" type="text/scss" href="/theme_hspl_emerald/static/src/scss/header2.scss"/>
-        </xpath>
-    </template>
+
     <template id="theme_customize" inherit_id="website.snippet_options">
-        <xpath expr="//div[@data-selector='#wrapwrap > header']//we-select[@data-variable='header-template']"
-               position="before">
-            <we-select string="Emreld Theme" data-variable="header-template" data-reload="/">
-                <we-button title="Header 1"
-                           data-name="header_1"
-                           data-customize-website-views="theme_hspl_emerald.option_header_01_assets,theme_hspl_emerald.header_1"
-                           data-customize-website-variable="'header_1'"
-                           data-img="/theme_hspl_emerald/static/src/img/Header_1.png"/>
-                <we-button title="Header 2"
-                           data-name="header_2"
-                           data-customize-website-views="theme_hspl_emerald.option_header_02_assets,theme_hspl_emerald.header_2"
-                           data-customize-website-variable="'header_2'"
-                           data-img="/theme_hspl_emerald/static/src/img/Header_2.png"/>
+        <xpath
+            expr="//div[@data-selector='#wrapwrap > header']//we-select[@data-variable='header-template']"
+            position="before"
+        >
+            <we-select
+                string="Emreld Theme"
+                data-variable="header-template"
+                data-reload="/"
+            >
+                <we-button
+                    title="Header 1"
+                    data-name="header_1"
+                    data-customize-website-views="theme_hspl_emerald.header1_scss,theme_hspl_emerald.header_1"
+                    data-customize-website-variable="'header_1'"
+                    data-img="/theme_hspl_emerald/static/src/img/Header_2.png"
+                />
+                <we-button
+                    title="Header 2"
+                    data-name="header_2"
+                    data-customize-website-views="theme_hspl_emerald.header2_scss,theme_hspl_emerald.header_2"
+                    data-customize-website-variable="'header_2'"
+                    data-img="/theme_hspl_emerald/static/src/img/Header_1.png"
+                />
             </we-select>
         </xpath>
     </template>
+
+    <record id="theme_hspl_emerald.header1_scss" model="ir.asset">
+        <field name="name">Header1 SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_hspl_emerald/static/src/scss/header1.scss</field>
+        <field name="active" eval="True" />
+        <field name="sequence" eval="17" />
+    </record>
+    <record id="theme_hspl_emerald.header2_scss" model="ir.asset">
+        <field name="name">header2 SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field name="path">theme_hspl_emerald/static/src/scss/header2.scss</field>
+        <field name="active" eval="False" />
+        <field name="sequence" eval="17" />
+    </record>
+
 </odoo>

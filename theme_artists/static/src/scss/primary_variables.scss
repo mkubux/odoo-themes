@@ -1,74 +1,13 @@
 //------------------------------------------------------------------------------
-// Palette
-//------------------------------------------------------------------------------
-
-$o-color-palettes: (
-    (
-        'o-color-1': #ab44ff,
-        'o-color-2': #3a3a3a,
-        'o-color-3': #e5e5e5,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'o-cc5-text': 'o-color-3',
-
-        'menu': 5,
-    ),
-    (
-        'o-color-1': #1ad68f,
-        'o-color-2': #2e2e2e,
-        'o-color-3': #cfcfcf,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'menu': 2,
-    ),
-    (
-        'o-color-1': #007882,
-        'o-color-2': #052286,
-        'o-color-3': #f9ede6,
-        'o-color-4': #ffffff,
-        'o-color-5': #33302e,
-
-        'o-cc5-link': #48d9e5,
-
-        'footer': 1,
-        'copyright': 1,
-    ),
-    (
-        'o-color-1': #0061df,
-        'o-color-2': #1b1b1b,
-        'o-color-3': #e8e6dc,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'menu': 2,
-        'footer': 2,
-    ),
-    (
-        'o-color-1': #f48847,
-        'o-color-2': #282d30,
-        'o-color-3': #e9ceb0,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'footer': 3,
-    ),
-    (
-        'o-color-1': #95d2e5,
-        'o-color-2': #454545,
-        'o-color-3': #f6f4f2,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'menu': 2,
-        'footer': 2,
-    ),
-);
-
-//------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
+
+$o-theme-h1-font-size-multiplier: (62 / 16);
+$o-theme-h2-font-size-multiplier: (44 / 16);
+$o-theme-h3-font-size-multiplier: (36 / 16);
+$o-theme-h4-font-size-multiplier: (24 / 16);
+$o-theme-h5-font-size-multiplier: (21 / 16);
+$o-theme-h6-font-size-multiplier: (18 / 16);
 
 $o-theme-font-configs: (
     'Handlee': (
@@ -138,6 +77,14 @@ $o-theme-font-configs: (
         'family': ('Radley', serif),
         'url': 'Radley:300,300i,400,400i,700,700i',
     ),
+    'Oxygen': (
+        'family': ('Oxygen', sans-serif),
+        'url': 'Oxygen:300,400,700',
+    ),
+    'Montserrat': (
+        'family': ('Montserrat', sans-serif),
+        'url': 'Montserrat:300,300i,400,400i,700,700i',
+    ),
 );
 
 //------------------------------------------------------------------------------
@@ -146,15 +93,63 @@ $o-theme-font-configs: (
 
 $o-website-values-palettes: (
     (
+        'color-palettes-name': 'artists-1',
         'header-font-size': (13 / 16) * 1rem,
-        'font': 'Droid Sans',
-        'headings-font': 'Radley',
-        'navbar-font': 'Radley',
-        'buttons-font': 'Radley',
+        'font': 'Montserrat',
+        'headings-font': 'Oxygen',
+        'navbar-font': 'Montserrat',
+        'buttons-font': 'Montserrat',
         'btn-ripple': true,
         'header-template': 'hamburger',
         'hamburger-type': 'off-canvas',
         'hamburger-position': 'left',
         'footer-template': 'centered',
+        'link-underline': 'never',
     ),
 );
+
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'artists-1');
+
+$o-color-palettes-compatibility-indexes: (
+    1: 'artists-1',
+    2: 'artists-2',
+    3: 'artists-3',
+    4: 'artists-4',
+    5: 'artists-5',
+    6: 'artists-6',
+    7: 'generic-1',
+    8: 'generic-2',
+    9: 'generic-3',
+    10: 'generic-4',
+    11: 'generic-5',
+    12: 'generic-6',
+    13: 'generic-7',
+    14: 'generic-8',
+    15: 'generic-9',
+    16: 'generic-10',
+    17: 'generic-11',
+    18: 'generic-12',
+    19: 'generic-13',
+    20: 'generic-14',
+    21: 'generic-15',
+    22: 'generic-16',
+    23: 'generic-17',
+);
+
+//------------------------------------------------------------------------------
+// Shapes
+//------------------------------------------------------------------------------
+
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Airy/12', (3: 3));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Airy/12_001', (3: 5));
+$o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Airy/12_001', 'second', (3: 4));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/02_001', (3: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/04', (5: 4));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/05', (5: 4));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/08', (2: 4));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/27', (2: 4));
+$o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Wavy/27', 'second', (1: 5, 2: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Origins/16', (3: 5));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Floats/02', (1: 5, 2: 5, 3: 1, 5: 1));
+$o-bg-shapes: add-footer-shape-colors-mapping('web_editor', 'Airy/12', (3: 'footer'));
+$o-bg-shapes: add-footer-shape-colors-mapping('web_editor', 'Airy/12_001', (3: 'footer'));

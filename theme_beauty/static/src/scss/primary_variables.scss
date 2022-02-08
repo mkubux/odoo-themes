@@ -1,84 +1,13 @@
-$o-color-palettes: (
-    (
-        'o-color-1': #df699c,
-        'o-color-2': #590046,
-        'o-color-3': #dbe8ed,
-        'o-color-4': #ffffff,
-        'o-color-5': #222222,
-
-        'o-cc2-text': 'o-color-1',
-
-        'menu': 5,
-        'footer': 5,
-        'copyright': 5,
-    ),
-    (
-        'o-color-1': #4fda89,
-        'o-color-2': #714e9c,
-        'o-color-3': #dadbdb,
-        'o-color-4': #ffffff,
-        'o-color-5': #242327,
-
-        'o-cc2-link': 'o-color-5',
-
-        'menu': 4,
-        'footer': 4,
-        'copyright': 2,
-    ),
-    (
-        'o-color-1': #009083,
-        'o-color-2': #8ba1a0,
-        'o-color-3': #e9e9e9,
-        'o-color-4': #ffffff,
-        'o-color-5': #1e222f,
-
-        'footer': 2,
-        'copyright': 2,
-    ),
-    (
-        'o-color-1': #b6977d,
-        'o-color-2': #585832,
-        'o-color-3': #e7e5e5,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'footer': 1,
-        'copyright': 1,
-    ),
-    (
-        'o-color-1': #1ad68f,
-        'o-color-2': #2e2e2e,
-        'o-color-3': #e9e9e9,
-        'o-color-4': #ffffff,
-        'o-color-5': #000000,
-
-        'o-cc2-link': 'o-color-5',
-
-        'menu': 3,
-        'footer': 3,
-        'copyright': 3,
-    ),
-    (
-        'o-color-1': #b3b862,
-        'o-color-2': #1e493b,
-        'o-color-3': #e3e7e9,
-        'o-color-4': #ffffff,
-        'o-color-5': #112625,
-
-        'o-cc2-link': 'o-color-5',
-    ),
-);
-
 //------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
 
-$o-theme-h1-font-size-multiplier: (25 / 12);
-$o-theme-h2-font-size-multiplier: (18 / 12);
-$o-theme-h3-font-size-multiplier: (16 / 12);
-$o-theme-h4-font-size-multiplier: (14 / 12);
-$o-theme-h5-font-size-multiplier: 1;
-$o-theme-h6-font-size-multiplier: 1;
+$o-theme-h1-font-size-multiplier: (62 / 16);
+$o-theme-h2-font-size-multiplier: (48 / 16);
+$o-theme-h3-font-size-multiplier: (36 / 16);
+$o-theme-h4-font-size-multiplier: (28 / 16);
+$o-theme-h5-font-size-multiplier: (24 / 16);
+$o-theme-h6-font-size-multiplier: (21 / 16);
 
 $o-theme-font-configs: (
     'Heebo': (
@@ -117,6 +46,10 @@ $o-theme-font-configs: (
         'family': ('Muli', sans-serif),
         'url': 'Muli:300,300i,400,400i,700,700i',
     ),
+    'DM Serif Display': (
+        'family': ('DM Serif Display', serif),
+        'url': 'DM+Serif+Display:400,400i',
+    ),
 );
 
 //------------------------------------------------------------------------------
@@ -125,16 +58,62 @@ $o-theme-font-configs: (
 
 $o-website-values-palettes: (
     (
+        'color-palettes-name': 'beauty-1',
+
         'header-font-size': (18 / 16) * 1rem,
-        'btn-border-radius': .3125rem,
-        'btn-border-radius-lg': .3125rem,
-        'btn-border-radius-sm': .3125rem,
         'font': 'Questrial',
-        'headings-font': 'Questrial',
+        'headings-font': 'DM Serif Display',
         'navbar-font': 'Questrial',
         'buttons-font': 'Questrial',
-        'header-template': 'contact',
+        'header-template': 'Contact',
         'footer-template': 'default',
         'header-links-style': 'outline',
+
+        // Buttons
+        'btn-padding-y':                    .45rem,
+        'btn-padding-x':                    1.35rem,
+        'btn-padding-y-sm':                 .3rem,
+        'btn-padding-x-sm':                 .9rem,
+        'btn-padding-y-lg':                 .6rem,
+        'btn-padding-x-lg':                 1.8rem,
+        'btn-border-radius':                10rem,
+        'btn-border-radius-sm':             10rem,
+        'btn-border-radius-lg':             10rem,
     ),
 );
+
+$o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'beauty-1');
+
+$o-color-palettes-compatibility-indexes: (
+    1: 'beauty-1',
+    2: 'beauty-2',
+    3: 'beauty-3',
+    4: 'beauty-4',
+    5: 'beauty-5',
+    6: 'beauty-6',
+    7: 'generic-1',
+    8: 'generic-2',
+    9: 'generic-3',
+    10: 'generic-4',
+    11: 'generic-5',
+    12: 'generic-6',
+    13: 'generic-7',
+    14: 'generic-8',
+    15: 'generic-9',
+    16: 'generic-10',
+    17: 'generic-11',
+    18: 'generic-12',
+    19: 'generic-13',
+    20: 'generic-14',
+    21: 'generic-15',
+    22: 'generic-16',
+    23: 'generic-17',
+);
+
+//------------------------------------------------------------------------------
+// Shapes
+//------------------------------------------------------------------------------
+
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/09', (1: 3, 5: 3));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/13_001', (1: 3));
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Wavy/20', (2: 1));
